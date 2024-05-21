@@ -784,12 +784,11 @@ class Serverpod {
       try {
         await session.db.testConnection();
         return session;
-      } catch (e, stackTrace) {
+      } catch (e) {
         // Write connection error to stderr.
         stderr.writeln(
           'Failed to connect to the database. Retrying in 10 seconds. $e',
         );
-        stderr.writeln('$stackTrace');
         if (!printedDatabaseConnectionError) {
           stderr.writeln('Database configuration:');
           stderr.writeln(config.database.toString());
