@@ -2077,7 +2077,7 @@ class SerializableModelLibraryGenerator {
           ..returns = refer('String')
           ..name = 'toString'
           ..lambda = true
-          ..body = refer('name').code,
+          ..body = refer('this.name').code,
       ),
     ];
   }
@@ -2116,7 +2116,7 @@ class SerializableModelLibraryGenerator {
           ..returns = refer('String')
           ..name = 'toString'
           ..lambda = true
-          ..body = refer('name').code,
+          ..body = refer('this.name').code,
       ),
     ];
   }
